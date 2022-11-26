@@ -1,5 +1,3 @@
-declare module "vue-spinner/src/ClipLoader.vue" {}
-
 export type State = {
   isModalOpen: boolean;
   inSignInForm: boolean;
