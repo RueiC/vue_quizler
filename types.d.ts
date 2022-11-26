@@ -1,0 +1,26 @@
+declare module "vue-spinner/src/ClipLoader.vue" {}
+
+export type State = {
+  isModalOpen: boolean;
+  inSignInForm: boolean;
+  isShowSpinnder: boolean;
+};
+
+export type Getters = {
+  isModalOpen: () => boolean;
+  inSignInForm: () => boolean;
+  isShowSpinnder: () => boolean;
+};
+
+export type FlashCard = {
+  id: string;
+  definition: string;
+  word: string;
+};
+
+interface FlashcardSet {
+  id: string;
+  title: string;
+  uid: string;
+  flashcards: FlashCard[];
+}
