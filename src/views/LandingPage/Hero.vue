@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import image from "../../assets/index";
+import { type Commit, useStore } from 'vuex';
+import image from '../../assets/index';
+const { commit }: { commit: Commit } = useStore();
 </script>
 
 <template>
@@ -23,12 +25,14 @@ import image from "../../assets/index";
             更順利</span
           >
         </h1>
-        <a
-          href="#"
-          class="bg-quizler-blue-1 text-white px-[3rem] py-[1.5rem] rounded-[0.5rem] text-[2.5rem] xl:text-[3.5rem] font-medium cursor-pointer hover:scale-105 duration-300 transition-all ease-in-out"
+        <button
+          href=""
+          class="bg-quizler-blue-1 text-white px-[3rem] py-[1.5rem] rounded-[1rem] text-[2.5rem] xl:text-[3.5rem] font-medium cursor-pointer hover:scale-105 duration-300 transition-all ease-in-out"
+          type="button"
+          @click="commit('OPEN_MODAL', true)"
         >
           開始學習
-        </a>
+        </button>
       </div>
     </div>
   </section>

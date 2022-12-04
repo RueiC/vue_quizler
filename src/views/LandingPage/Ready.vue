@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { type Commit, useStore } from 'vuex';
+
+const { commit }: { commit: Commit } = useStore();
+</script>
 
 <template>
   <section
@@ -11,6 +15,7 @@
     <button
       class="bg-quizler-blue-1 text-[2.5rem] font-medium text-white px-[2.5rem] py-[1rem] rounded-[1rem] transition-all duration-100 ease-linear hover:scale-105 cursor-pointer"
       type="button"
+      @click="commit('OPEN_MODAL', true)"
     >
       開始學習
     </button>
